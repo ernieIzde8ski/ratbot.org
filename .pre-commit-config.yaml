@@ -20,3 +20,20 @@ repos:
           - "prettier@^3.3.3"
           - "prettier-plugin-astro@^0.14.1"
         always_run: true
+      - id: astro-check
+        name: astro check
+        entry: astro check
+        language: node
+        files: "^(?:public|src)/.+|astro\\.config\\.mjs|tsconfig\\.json"
+        pass_filenames: false
+        additional_dependencies:
+          - "astro@^4.16.13"
+          - "@astrojs/check@^0.9.4"
+      - id: astro-build
+        name: astro build
+        entry: astro build
+        language: node
+        files: "^(?:public|src)/.+|astro\\.config\\.mjs|tsconfig\\.json"
+        pass_filenames: false
+        additional_dependencies:
+          - "astro@^4.16.13"
